@@ -9,16 +9,19 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="heading">Cash Register Manager</h1>
-      <p class"description"> Enter bill and cash amount given by customer, know the amount and number of notes to be returned</p>
-      <label for="bill-amount">Bill Amount:</label>
-      <input type="text" id="bill-amount" value="">
-      <label for="cash-given">Cash Given</label>
-      <input type="text" id="cash-given" value="">
+      <h1 class="heading">Cash Register</h1>
+      <h3 class="description">Enter bill amount followed by cash given by the customer. The change due with minimum number of notes will be shown below.</h3>
+      <br>
+      <label for="bill-amount" style="color: #800080; font-weight: bolder;">Bill Amount:</label>
+      <input type="text" id="bill-amount">
+      <br>
+      <label for="cash-given" style="color: #800080; font-weight: bolder;">Cash Given:</label>
+      <input type="text" id="cash-given">
+      <br>
       <button type="button" id="check-button">Check</button>
-      <p id="error-mesage"></p>
-      <table class="change-table">
-        <caption>Return Change</caption>
+      <p id="error-message" style="color: #800080; font-weight: bold;"></p>
+      <br>
+      <table class="change-table" cellspacing="10">
         <tr>
           <th>No of notes</th>
           <td class="no-of-notes"></td>
@@ -32,15 +35,15 @@
         <tr>
           <th>Note</th>
           <td>2000</td>
-          <td>500</td>
-          <td>100</td>
-          <td>20</td>
-          <td>10</td>
-          <td>5</td>
-          <td>1</td>
+          <td>&nbsp 500 &nbsp</td>
+          <td>&nbsp&nbsp&nbsp 100 &nbsp&nbsp</td>
+          <td>&nbsp&nbsp&nbsp 20 &nbsp&nbsp&nbsp</td>
+          <td>&nbsp&nbsp&nbsp 10 &nbsp&nbsp&nbsp</td>
+          <td>&nbsp&nbsp&nbsp&nbsp 5 &nbsp&nbsp&nbsp&nbsp</td>
+          <td>&nbsp&nbsp&nbsp&nbsp 1 &nbsp&nbsp&nbsp&nbsp</td>
         </tr>
       </table>
     </div>
   </body>
-  <script type="text/javascript" src="index.js"> </script>
+  <script src="index.js"> </script>
 </html>
