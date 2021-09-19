@@ -4,6 +4,20 @@ var checkButton = document.querySelector("#check-button");
 var message = document.querySelector("#error-message");
 var noOfNotes = document.querySelectorAll(".no-of-notes");
 const availableNotes = [2000,500,100,20,10,5,1];
+const changeTable = document.querySelector(".change-table");
+const nextButton = document.querySelector("#next-button");
+
+cashGiven.style.display = "none";
+checkButton.style.display = "none";
+changeTable.style.display = "none";
+
+nextButton.addEventListener("click", function displayNext(){
+  cashGiven.style.display = "block";
+  checkButton.style.display = "block";
+  changeTable.style.display = "block";
+});
+
+
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
   hideMessage();
