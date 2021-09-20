@@ -6,6 +6,7 @@ var noOfNotes = document.querySelectorAll(".no-of-notes");
 const availableNotes = [2000,500,100,20,10,5,1];
 const changeTable = document.querySelector(".change-table");
 const nextButton = document.querySelector("#next-button");
+const cashGivenLabel = document.querySelector("#cash-given-label");
 
 cashGiven.style.display = "none";
 checkButton.style.display = "none";
@@ -15,6 +16,8 @@ nextButton.addEventListener("click", function displayNext(){
   cashGiven.style.display = "block";
   checkButton.style.display = "block";
   changeTable.style.display = "block";
+  cashGivenLabel.innerText = "Cash Given";
+
 });
 
 
