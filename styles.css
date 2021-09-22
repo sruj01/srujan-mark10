@@ -51,6 +51,7 @@ body{
   font-size: 16px;
   color: white;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 .change-table{
   padding: 2rem;
