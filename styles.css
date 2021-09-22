@@ -70,3 +70,11 @@ body{
   border-radius: 0.5rem;
   cursor: pointer;
 }
+.label-style{
+  color: #800080;
+  font-weight: bolder;
+}
+#error-message{
+  color: #800080;
+  font-weight: bold;
+}
