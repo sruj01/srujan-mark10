@@ -45,7 +45,7 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
     }
   }
   else{
-    showMessage("Invalid Bill Amount");
+    showMessage("Invalid Cash input");
   }
 });
 
