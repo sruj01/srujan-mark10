@@ -25,22 +25,21 @@ body{
   margin: auto;
 }
 
-/**.description{
-  max-width: 700px;
-  text-align: center;
-  margin: auto;
-}**/
 #bill-amount{
   max-width: 600px;
   margin: auto;
   height: 4vh;
   border-radius: 0.5rem;
+  text-align: center;
+  font-weight: bolder;
 }
 #cash-given{
   max-width: 600px;
   margin: auto;
   height: 4vh;
   border-radius: 0.5rem;
+  text-align: center;
+  font-weight: bolder;
 }
 #check-button{
   max-width: 150px;
