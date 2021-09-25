@@ -74,7 +74,7 @@ body{
   color: #800080;
   font-weight: bolder;
 }
-#error-message{
+.error{
   color: #800080;
   font-weight: bold;
 }

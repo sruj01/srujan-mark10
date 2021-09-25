@@ -1,7 +1,8 @@
 var billAmount = document.querySelector("#bill-amount");
 var cashGiven = document.querySelector("#cash-given");
 var checkButton = document.querySelector("#check-button");
-var message = document.querySelector("#error-message");
+var errorMessage1 = document.querySelector(".error-message1");
+var errorMessage2 = document.querySelector(".error-message2");
 var noOfNotes = document.querySelectorAll(".no-of-notes");
 const availableNotes = [2000,500,100,20,10,5,1];
 const changeTable = document.querySelector(".change-table");
@@ -13,13 +14,21 @@ checkButton.style.display = "none";
 changeTable.style.display = "none";
 
 nextButton.addEventListener("click", function displayNext(){
-  cashGiven.style.display = "block";
-  checkButton.style.display = "block";
-  changeTable.style.display = "block";
-  cashGivenLabel.innerText = "Cash Given";
+
+  if(billAmount.value){
+    cashGiven.style.display = "block";
+    checkButton.style.display = "block";
+    changeTable.style.display = "block";
+    errorMessage1.style.display = "none";
+    cashGivenLabel.innerText = "Cash Given";
+
+  }
+  else{
+    errorMessage1.innerText = "Field cannot be empty";
+  }
+
 
 });
-
 
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
@@ -48,10 +57,10 @@ function calculateChange(amountToBeReturned){
 }
 
 function hideMessage(){
-  message.style.display = "none";
+  errorMessage2.style.display = "none";
 }
 
 function showMessage(msg){
-  message.style.display = "block";
-  message.innerText = msg;
+  errorMessage2.style.display = "block";
+  errorMessage2.innerText = msg;
 }
