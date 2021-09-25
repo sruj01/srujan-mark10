@@ -14,14 +14,15 @@ checkButton.style.display = "none";
 changeTable.style.display = "none";
 
 nextButton.addEventListener("click", function displayNext(){
-
-  if(billAmount.value){
+  if(billAmount.value < 0){
+    errorMessage1.innerText = "Bill amount can't be negative";
+  }
+  else if(billAmount.value){
     cashGiven.style.display = "block";
     checkButton.style.display = "block";
     changeTable.style.display = "block";
     errorMessage1.style.display = "none";
     cashGivenLabel.innerText = "Cash Given";
-
   }
   else{
     errorMessage1.innerText = "Field cannot be empty";
@@ -33,7 +34,8 @@ nextButton.addEventListener("click", function displayNext(){
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
   hideMessage();
-  if (billAmount.value > 0){
+
+  if (cashGiven.value > 0){
     if (parseInt(billAmount.value) <= parseInt(cashGiven.value)) {
       const amountToBeReturned = cashGiven.value - billAmount.value;
       calculateChange(amountToBeReturned);
