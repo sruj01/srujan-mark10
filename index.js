@@ -14,13 +14,10 @@ checkButton.style.display = "none";
 changeTable.style.display = "none";
 
 nextButton.addEventListener("click", function displayNext(){
-  if(billAmount.value < 0){
-    errorMessage1.innerText = "Bill amount can't be negative";
-  }
-  else if(billAmount.value){
+  if(billAmount.value <= 0){errorMessage1.innerText = "Bill amount can't be negative or zero";}
+  else if(billAmount.value >= 0){
     cashGiven.style.display = "block";
     checkButton.style.display = "block";
-
     errorMessage1.style.display = "none";
     cashGivenLabel.innerText = "Cash Given";
   }
