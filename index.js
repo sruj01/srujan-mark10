@@ -20,7 +20,7 @@ nextButton.addEventListener("click", function displayNext(){
   else if(billAmount.value){
     cashGiven.style.display = "block";
     checkButton.style.display = "block";
-    changeTable.style.display = "block";
+
     errorMessage1.style.display = "none";
     cashGivenLabel.innerText = "Cash Given";
   }
@@ -39,6 +39,7 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
     if (parseInt(billAmount.value) <= parseInt(cashGiven.value)) {
       const amountToBeReturned = cashGiven.value - billAmount.value;
       calculateChange(amountToBeReturned);
+      changeTable.style.display = "block";
     }
     else {
       showMessage("Fancy a chat with the cops?");
